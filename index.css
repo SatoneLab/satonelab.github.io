@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #F2F2F2;
     margin: 0;
@@ -22,16 +24,6 @@ h1 {
     margin: 0;
 }
 
-    h1 a {
-        font-weight: bold;
-        color: #8c0000;
-        text-decoration: none;
-    }
-
-        h1 a:hover {
-            text-decoration: underline;
-        }
-
 h2 {
     font-size: 24px;
     margin: 0;
@@ -49,12 +41,39 @@ header {
 }
 
 #header-inner {
-    padding: 30px;
     display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center;            /* 縦中央揃え */
+    padding: 30px;
+
+    
 }
 
-#header-inner li {
+.side-title {
+    margin: 0;      /* h1のデフォルト余白を消す */
+
+}
+.navigation-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+.navigation-list a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+}
+.navigation-list li {
     list-style: none;
+
+}
+
+.navigation-list a:hover {
+    background-color: #DDD;
 }
 
 .description {
@@ -76,9 +95,6 @@ ul {
     padding: 0;
 }
 
-li {
-    list-style: disc;
-}
 
 p {
     margin: 1em 0;
