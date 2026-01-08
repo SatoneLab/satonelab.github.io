@@ -3,62 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <title>Satone Lab</title>
-  <meta name="description" content="ページの説明">
+  <meta name="description" content="SatoneLabは、TRPG用のツールや個人製作物を公開している趣味のサイトだぞい。">
   <meta name="keywords" content="Vtuber">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/css/breadcrumb.css">
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-..."
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <div id="outer">
-
     <header>
-      <div id="header-inner">
-        <h1 class="site-title">
-          <a href="/">さとね Lab</a>
-        </h1>
-        <ul class="navigation-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="https://yutorize.2-d.jp/ytsheet/sw2.5/?mode=making"><i class="fa-regular fa-house"></i>TRPGツール</a></li>
-          <li><a href="/">作ったもの</a></li>
-          <li><a href="/">ぴよ</a></li>
-        </ul>
-      </div>
-      <p class="description">作ったもの公開する！</p>
+      <div id="header"></div>
     </header>
 
+    <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
+
     <div id="content">
-      <div class="inner"><h2>作ったもの</h2>
-      <p>文章あれこれ</p>
-      <h3>記事ページ見出し・中</h3>
-      <p>文章あれこれ</p>
-      <h4>記事ページ見出し・小</h4>
-      <p>文章あれこれ</p>
+      <div class="inner">
+        <p class="description">TRPG用のツールや個人製作物を公開している趣味のサイトだぞい。</p>
+        <div class="card-container">
+          <div class="card" data-href="/trpg-tools/">
+            <h3><i class="fa-solid fa-dice"></i>TRPGツール</h3>
+            <p>TRPG用のツール集</p>
+          </div>
+          <div class="card" data-href="/content/">
+            <h3><i class="fa-solid fa-gears"></i>コンテンツ</h3>
+            <p>個人製作物を公開</p>
+          </div>
+        </div>
+
+        <div class="img-sns-icon-container">
+          <img src="/assets/images/001_微笑_差し出す_正面_全体.png" class="satone-img">
+          <div id="sns-icon-list">
+            <a class="sns-icon-item" href="https://twitter.com/satone_030" target="_blank" rel="noopener noreferrer" class="btn twitter">
+              <div class="sns-icon-circle twitter-icon-circle">
+                <i class="fab fa-twitter fa-xl" style="color: #FFF;"></i>
+              </div>
+              <div class="sns-icon-label">Twitter</div>
+            </a>
+            <a class="sns-icon-item" href="https://www.youtube.com/channel/UCyJ1rzyCBxRZg5x68WcX-mA" target="_blank" rel="noopener noreferrer" class="btn youtube">
+              <div class="sns-icon-circle youtube-icon-circle">
+                <i class="fab fa-youtube fa-xl" style="color: #FFF;"></i>
+              </div>
+              <div class="sns-icon-label">YouTube</div>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <aside>
-      <div id="side-inner">
-        <div class="side-title">サイドバータイトル</div>
-          <div class="side">
-          <ul>
-          <li>記事ページへのリンク</li>
-          <li>記事ページへのリンク</li>
-          </ul>
-        </div>
-      </div>
-    </aside>
+
 
     <footer>
-      © 2026 Satone Lab
+      <div id="footer"></div>
     </footer>
-
   </div>
+
+
+  <script src="/common/header.js"></script>
+  <script src="/common/footer.js"></script>
+  
+  <script type="application/json" id="breadcrumb-data">
+  [
+  ]
+  </script>
+  <script src="/common/breadcrumb.js"></script>
+  
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if(e.target.tagName.toLowerCase() === 'a') return;
+        const url = card.getAttribute('data-href');
+        if(url) window.location.href = url;
+      });
+    });
+  </script>
 </body>
 </html>

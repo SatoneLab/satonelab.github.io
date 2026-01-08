@@ -1,0 +1,140 @@
+h1 {
+    font-size: 28px;
+    font-family: 'monospace', serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 15px 0 5px 0;
+    border-bottom: 1px solid #999;
+}
+h3 {
+    font-size: 20px;
+}
+
+.description {
+    text-align: center;
+    padding-top: 20px;
+}
+#outer {
+    margin: 2% auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+img {
+    max-width: 370px;
+
+    height: auto;
+    border: 0;
+    display: block;   /* ブロックにする */
+    margin-left: auto;
+    margin-right: auto; /* 左右マージンを自動に */
+}
+/* --- Content --- */
+#content {
+    padding: 0px 30px 15px 30px;
+}
+
+.card-container {
+    padding-top: 20px;
+    max-width: 600px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto; /* 左右マージンを自動に */
+    justify-content: center;
+}
+.card {
+    width: 40%;
+    background-color: #fff;          /* 白背景 */
+    border-radius: 20px;             /* 角丸 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.3s;
+    max-width: 300px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-5px);   /* ほんの少し浮き上がる */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+
+/* --- Satone image --- */
+
+.img-sns-icon-container {
+    position: relative;
+}
+
+/* ---SNS icon--- */
+#sns-icon-list {
+    position: absolute;
+    left: 50%;   /* 横50% */
+    top: 69%;    /* 上から70% */
+    transform: translate(-50%, -50%); /* 自分自身の中央を基準点にする */
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.sns-icon-item {
+    display: flex;
+    width: 80px;
+    flex-direction: column;
+    align-items: center;     /* 円とラベルを中央揃え */
+    text-decoration: none;  /* aタグの下線を消す */
+    color: inherit;         /* 色を継承 */
+}
+
+/* 丸いアイコン */
+.sns-icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;     /* 円にする */
+    display: flex;
+
+    align-items: center;    /* 縦中央 */
+    justify-content: center;/* 横中央 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 22px;        /* アイコンサイズ */
+    transition: all 0.2s;
+}
+
+/* 下のラベル */
+.sns-icon-label {
+    margin-top: 6px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* hover */
+.sns-icon-item:hover .sns-icon-circle {
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transform: translateY(-3px);   /* ほんの少し浮き上がる */
+}
+
+.twitter-icon-circle {
+    background-color: #1da1f2;
+}
+.youtube-icon-circle {
+    background-color: #ff0033;
+}

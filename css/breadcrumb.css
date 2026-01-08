@@ -1,0 +1,13 @@
+/* --- Breadcrumb ---*/
+.breadcrumb ol {
+    display: flex;
+    list-style: none;
+    padding: 30px 0 0 40px;
+    margin: 0;
+}
+
+.breadcrumb li + li::before {
+    content: ">";
+    margin: 0 0.5em;
+    color: #999;
+}

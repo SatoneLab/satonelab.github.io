@@ -1,0 +1,47 @@
+h1 {
+    font-size: 28px;
+    font-family: 'monospace', serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 15px 0 5px 0;
+    border-bottom: 1px solid #999;
+}
+h3 {
+    font-size: 20px;
+    padding: 15px 0 0 0;
+}
+img {
+    max-width: 70%;
+    height: auto;
+    border: 0;
+}
+#outer {
+    margin: 2% auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.description {
+    text-align: center;
+}
+
+/* --- Content --- */
+#content {
+    padding: 0px 30px 15px 30px;
+}
+#content h2 {
+    text-align: center;
+}
+.inner {
+
+}
+
+
+
+
