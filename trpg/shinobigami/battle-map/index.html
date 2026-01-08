@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SW2.5 | TRPGツール | Satone Lab</title>
+  <meta name="description" content="さとねが作ったシノビガミの戦闘用マップだぞい。">
+  <meta name="keywords" content="Vtuber TRPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/css/breadcrumb.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="outer">
+    <header>
+      <div id="header"></div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <div id="content">
+      <h2>戦闘用マップ</h2>
+
+      <div class="tab-container">
+
+        <!-- タブ -->
+        <div class="tab-button-container">
+          <button class="tab-button active" data-tab="bg-semi-transparent">半透明 Ver</button>
+          <button class="tab-button" data-tab="bg-transparent">透明 Ver</button>
+        </div>
+
+        <div class="tab-content-container">
+          <div class="tab-content active" id="bg-semi-transparent">
+            <img src="/assets/images/シノビガミ_戦闘マップ_背景黒半透明35.png" alt="上級戦闘用マップ 30m">
+            <p class="description">シノビガミの戦闘用マップ。盤面の視認性を上げるために背景が半透明になっています。</p>
+            <a href="/assets/images/シノビガミ_戦闘マップ_背景黒半透明35.png" download class="download-btn">
+              <i class="fa-solid fa-download" style="color: #fff;"></i>
+              ダウンロード（半透明 Ver）
+            </a>
+            <p class="meta">png / 151KB</p>
+          </div>
+
+          <div class="tab-content" id="bg-transparent">
+            <img src="/assets/images/シノビガミ_戦闘マップ_背景透明.png" alt="上級戦闘用マップ 50m">
+            <p class="description">シノビガミの戦闘用マップ。背景が透明になっています。</p>
+            <a href="/assets/images/シノビガミ_戦闘マップ_背景透明.png" download class="download-btn">
+              <i class="fa-solid fa-download" style="color: #fff;"></i>
+              ダウンロード（透明 Ver）
+            </a>
+            <p class="meta">png / 140KB</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer"></div>
+    </footer>
+  </div>
+
+
+  <script src="/common/header.js"></script>
+  <script src="/common/footer.js"></script>
+  
+  <script type="application/json" id="breadcrumb-data">
+  [
+    {"name":"HOME","url":"/"},
+    {"name":"TRPGツール","url":"/trpg/"},
+    {"name":"シノビガミ","url":"/trpg/shinobigami/"},
+    {"name":"戦闘用マップ","url":"/trpg/shinobigami/battle-map/"}
+  ]
+  </script>
+  <script src="/common/breadcrumb.js"></script>
+
+  <script>
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.tab;
+
+      document.querySelectorAll('.tab-button').forEach(b =>
+        b.classList.remove('active')
+      );
+      document.querySelectorAll('.tab-content').forEach(c =>
+        c.classList.remove('active')
+      );
+
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+  </script>
+
+
+</body>
+</html>

@@ -35,8 +35,42 @@ h3 {
     text-align: center;
 }
 
-#content p {
-    margin-bottom: 0;
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card {
+    display: block;
+    width: 270px;
+    text-align: center;
+    text-decoration: none; /* 下線を消す */
+    color: inherit;        /* 親要素の文字色を使う */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);   /* ほんの少し浮き上がる */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.card h3 {
+    margin: 5px 10px 20px 10px;
 }
 
 
+
+@media (max-width: 700px) {
+#outer {
+    margin: 0px auto;
+}
+}
