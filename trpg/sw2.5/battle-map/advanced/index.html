@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SW2.5 | TRPGツール | Satone Lab</title>
+  <meta name="description" content="さとねが作ったSW2.5のツールを公開しているぞい。">
+  <meta name="keywords" content="Vtuber TRPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/css/breadcrumb.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="outer">
+    <header>
+      <div id="header"></div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <div id="content">
+      <h2>上級戦闘マップ</h2>
+
+      <div class="tab-container">
+
+        <!-- タブ -->
+        <div class="tab-button-container">
+          <button class="tab-button active" data-tab="map30">30m Ver</button>
+          <button class="tab-button" data-tab="map50">50m Ver</button>
+        </div>
+
+        <div class="tab-content-container">
+          <div class="tab-content active" id="map30">
+            <img src="/assets/images/SW2.5_上級戦闘マップ_30m.png" alt="上級戦闘用マップ 30m">
+            <p class="description">上級戦闘用のマップ。小規模の戦闘に適したサイズ。</p>
+            <a href="/assets/images/SW2.5_上級戦闘マップ_30m.png" download class="download-btn">
+              <i class="fa-solid fa-download" style="color: #fff;"></i>
+              ダウンロード（30mVer）
+            </a>
+            <p class="meta">png / 174KB</p>
+          </div>
+
+          <div class="tab-content" id="map50">
+            <img src="/assets/images/SW2.5_上級戦闘マップ_50m.png" alt="上級戦闘用マップ 50m">
+            <p class="description">上級戦闘用のマップ。大規模の戦闘に適したサイズ。</p>
+            <a href="/assets/images/SW2.5_上級戦闘マップ_50m.png" download class="download-btn">
+              <i class="fa-solid fa-download" style="color: #fff;"></i>
+              ダウンロード（50mVer）
+            </a>
+            <p class="meta">png / 216KB</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer"></div>
+    </footer>
+  </div>
+
+
+  <script src="/common/header.js"></script>
+  <script src="/common/footer.js"></script>
+  
+  <script type="application/json" id="breadcrumb-data">
+  [
+    {"name":"HOME","url":"/"},
+    {"name":"TRPGツール","url":"/trpg/"},
+    {"name":"ソード・ワールド2.5","url":"/trpg/sw2.5/"},
+    {"name":"上級戦闘マップ","url":"/trpg/sw2.5/battle-map/advanced"}
+  ]
+  </script>
+  <script src="/common/breadcrumb.js"></script>
+
+  <script>
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.tab;
+
+      document.querySelectorAll('.tab-button').forEach(b =>
+        b.classList.remove('active')
+      );
+      document.querySelectorAll('.tab-content').forEach(c =>
+        c.classList.remove('active')
+      );
+
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+h1 {
+    font-size: 28px;
+    font-family: 'monospace', serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+    border-bottom: 1px solid #999;
+}
+h3 {
+    font-size: 20px;
+    padding: 0 ;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+#outer {
+    margin: 2% auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.description {
+    text-align: center;
+}
+
+/* --- Content --- */
+#content {
+    padding: 30px 30px 15px 30px;
+}
+#content h2 {
+    text-align: center;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: block;
+    width: 350px;
+    text-align: center;
+    text-decoration: none; /* 下線を消す */
+    color: inherit;        /* 親要素の文字色を使う */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);   /* ほんの少し浮き上がる */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.card h3 {
+    margin: 5px 10px 20px 10px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.tool-card {
+    width: 350px;
+}
+.img-card {
+    width: 720px;
+}
+
+.tag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 6px;
+    font-size: 11px;
+    border-radius: 999px;
+    background: #f0f0f0;
+    color: #555;
+    vertical-align: middle;
+}
