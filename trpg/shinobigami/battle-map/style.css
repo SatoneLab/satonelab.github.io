@@ -27,7 +27,7 @@ img {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 #outer {
-    margin: 2% auto;
+    margin: 0 auto;
     max-width: 900px;
     background-color: #fff;
     border-radius: 10px;

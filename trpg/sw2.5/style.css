@@ -11,7 +11,7 @@ h2 {
     border-bottom: 1px solid #999;
 }
 h3 {
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 ;
 }
 
@@ -21,7 +21,7 @@ img {
     border: 0;
 }
 #outer {
-    margin: 2% auto;
+    margin: 0 auto;
     max-width: 900px;
     background-color: #fff;
     border-radius: 10px;
@@ -33,7 +33,7 @@ img {
 
 /* --- Content --- */
 #content {
-    padding: 30px 30px 15px 30px;
+    padding: 30px 20px 15px 20px;
 }
 #content h2 {
     text-align: center;
@@ -49,13 +49,12 @@ img {
 
 .card {
     display: block;
-    width: 355px;
     text-align: center;
     text-decoration: none; /* 下線を消す */
     color: inherit;        /* 親要素の文字色を使う */
     border: 1px solid #ddd;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: all 0.2s;
 }
@@ -74,10 +73,16 @@ img {
 }
 
 .tool-card {
-    width: 350px;
+    width: 355px;
 }
 .img-card {
-    width: 720px;
+    width: 725px;
+}
+
+.card-title i {
+    font-size: 0.9em;
+    margin-right: 5px;
+    color: #555;
 }
 
 .tag {
@@ -91,8 +96,21 @@ img {
     vertical-align: middle;
 }
 
-@media (max-width: 700px) {
+.rights-notice{
+    margin: 20px 30px;
+}
+
+.rights-notice p {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 764px) {
 #outer {
     margin: 0px auto;
 }
+.img-card {
+    width: 355px;
+}
+
 }
