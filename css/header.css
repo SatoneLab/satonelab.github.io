@@ -31,6 +31,11 @@ header {
   align-items: center;
   text-decoration: none; /* 下線を消す */
   color: inherit;        /* 親要素の文字色を使う */
+  transition: all 0.1s;
+}
+
+.site-brand-container:hover {
+  transform: translateY(-3px);   /* ほんの少し浮き上がる */
 }
 
 .site-brand-logo {
