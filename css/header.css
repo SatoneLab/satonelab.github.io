@@ -18,35 +18,32 @@ header {
   display: flex;
   justify-content: space-between; /* 左右に配置 */
   align-items: center;            /* 縦中央揃え */
-  padding: 30px 40px 15px 50px;
+  padding: 30px 40px 15px 40px;
   border-radius: 10px 10px 0 0;
   background: linear-gradient(#fff, #f0f8ff);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   border-bottom: 1px solid #ddd;
 }
 
-/* --- Site title ---*/
-.site-title {
-  font-size: 38px;
-  font-family: 'Playfair Display', serif;
+/* --- Site brand ---*/
+.site-brand-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* 下線を消す */
+  color: inherit;        /* 親要素の文字色を使う */
+}
+
+.site-brand-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.site-brand-name {
+  white-space: nowrap;
   color: #333;
-  padding: 0;
-  margin: 0;
-  letter-spacing: 1px; /* 文字間を少し空ける */
-  border-radius: 15px;
-  transition: all 0.3s;
-}
+  font-size: 40px;
 
-.site-title a{
-  text-decoration: none;
-  color: inherit;
-    
 }
-
-.site-title:hover {
-  color: #6AF;
-}
-
 
 /* ---Navigation Bar--- */
 .nav-icon-list {
@@ -107,11 +104,15 @@ header {
   height: 50px;
 }
 #header-inner {
-  padding: 10px 2px 5px 10px;
+  padding: 10px 2px 5px 15px;
   border-radius: 0;
 }
-.site-title {
-  font-size: 21px;
+.site-brand-logo {
+  width: 55px;
+  height: 55px;
+}
+.site-brand-name {
+  font-size: 30px;
 }
 
 .nav-icon-list {
@@ -127,5 +128,35 @@ header {
 .nav-icon-label {
   margin-top: 6px;
   font-size: 10px;
+}
+}
+
+
+/* --- small ---*/
+@media (max-width: 480px) {
+#header-inner {
+  padding: 10px 2px 5px 8px;
+  border-radius: 0;
+}
+.site-brand-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.site-brand-name {
+  font-size: 22px;
+  
+}
+
+.nav-icon-circle {
+  width: 40px;
+  height: 40px;
+
+  font-size: 18px;        /* アイコンサイズ */
+}
+
+.nav-icon-label {
+  margin-top: 6px;
+  font-size: 8px;
 }
 }
