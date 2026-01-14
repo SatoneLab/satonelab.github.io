@@ -28,8 +28,7 @@ h3 {
 
 /* --- Content --- */
 #content {
-    padding: 30px 30px 30px 30px;
-
+    /* paddingは base.css で指定済み */
 }
 #content h2 {
     text-align: center;
@@ -83,10 +82,4 @@ h3 {
 .marshmallow-icon {
     width: 17px;
     margin-right: 5px;
-}
-
-@media (max-width: 900px) {
-#outer {
-    margin: 0px auto;
-}
 }

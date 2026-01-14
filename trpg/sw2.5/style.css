@@ -33,7 +33,7 @@ img {
 
 /* --- Content --- */
 #content {
-    padding: 30px 20px 15px 20px;
+    /* paddingは base.css で指定済み */
 }
 #content h2 {
     text-align: center;
@@ -106,9 +106,6 @@ img {
 }
 
 @media (max-width: 764px) {
-#outer {
-    margin: 0px auto;
-}
 .img-card {
     width: 355px;
 }

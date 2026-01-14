@@ -38,7 +38,7 @@ img {
 }
 /* --- Content --- */
 #content {
-    padding: 0px 30px 15px 30px;
+    /* paddingは base.css で指定済み */
 }
 
 .card-container {
@@ -146,10 +146,3 @@ img {
     transform: translateY(-3px);   /* ほんの少し浮き上がる */
 }
 
-
-
-@media (max-width: 700px) {
-#outer {
-    margin: 0px auto;
-}
-}

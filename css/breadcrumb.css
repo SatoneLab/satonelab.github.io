@@ -2,8 +2,12 @@
 .breadcrumb ol {
     display: flex;
     list-style: none;
-    padding: 30px 0 0 40px;
+    padding: 30px 5px 20px 40px;
     margin: 0;
+}
+
+.breadcrumb li {
+    font-size: 18px;
 }
 
 .breadcrumb li + li::before {
@@ -14,9 +18,18 @@
 
 @media (max-width: 900px) {
 .breadcrumb ol {
-    padding: 40px 5px 0 10px;
+    padding: 30px 5px 20px 30px;
 }
-li {
+.breadcrumb li {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 480px) {
+.breadcrumb ol {
+    padding: 40px 5px 20px 15px;
+}
+.breadcrumb li {
     font-size: 11px;
 }
 }

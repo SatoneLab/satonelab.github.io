@@ -33,7 +33,7 @@ img {
 
 /* --- Content --- */
 #content {
-    padding: 30px 30px 15px 30px;
+    /* paddingは base.css で指定済み */
 }
 #content h2 {
     text-align: center;
@@ -104,11 +104,4 @@ img {
 .rights-notice p {
     margin: 0;
     text-align: center;
-}
-
-
-@media (max-width: 700px) {
-#outer {
-    margin: 0px auto;
-}
 }

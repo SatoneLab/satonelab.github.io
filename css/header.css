@@ -101,7 +101,7 @@ header {
 @media (max-width: 900px) {
 header {
   margin-top: 0;
-  height: 50px;
+  height: 70px;
 }
 #header-inner {
   padding: 10px 2px 5px 15px;
@@ -134,6 +134,9 @@ header {
 
 /* --- small ---*/
 @media (max-width: 480px) {
+header {
+  height: 45px;
+}
 #header-inner {
   padding: 10px 2px 5px 8px;
   border-radius: 0;

@@ -28,8 +28,7 @@ h3 {
 
 /* --- Content --- */
 #content {
-    padding: 30px 30px 30px 30px;
-
+    /* paddingは base.css で指定済み */
 }
 #content h2 {
     text-align: center;
@@ -89,13 +88,4 @@ h3 {
     background: #f0f0f0;
     color: #555;
     vertical-align: middle;
-}
-
-
-
-
-@media (max-width: 900px) {
-#outer {
-    margin: 0px auto;
-}
 }

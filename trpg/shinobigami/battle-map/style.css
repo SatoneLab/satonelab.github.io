@@ -15,17 +15,6 @@ h3 {
     padding: 0 ;
 }
 
-img {
-    display: block;   /* ブロックにする */
-    max-height: 450px;
-    min-height: 200px;
-    max-width: auto;
-    margin-left: auto;
-    margin-right: auto; /* 左右マージンを自動に */
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
 #outer {
     margin: 0 auto;
     max-width: 900px;
@@ -39,20 +28,21 @@ img {
 
 /* --- Content --- */
 #content {
-    padding: 30px 30px 15px 30px;
+    /* paddingは base.css で指定済み */
 }
 #content h2 {
     text-align: center;
 }
 
-.tab-button-container {
+/* --- tab button --- */
+.tab-btn-container {
     display: flex;
     justify-content: center; /* 横方向中央揃え */
     gap: 0px;
     margin-top: 30px;
 }
 
-.tab-button {
+.tab-btn {
     width: 40%;
     padding: 10px 20px;
     border: 2px solid #333;
@@ -69,12 +59,12 @@ img {
     box-shadow: 0 -8px 10px rgba(0,0,0,0.1);
 }
 
-.tab-button:hover {
+.tab-btn:hover {
     filter: brightness(1.02);
     box-shadow: 0 -8px 10px rgba(0,0,0,0.2);
 }
 
-.tab-button.active {
+.tab-btn.active {
     background: #fff;
     top: 2px;                      /* 線の上に乗せる */
 }
@@ -92,6 +82,20 @@ img {
     display: block;
 }
 
+/* --- map images --- */
+.map-img {
+    display: block;   /* ブロックにする */
+    max-height: 450px;
+    min-height: 200px;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto; /* 左右マージンを自動に */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- download button --- */
 .download-btn {
     display: block;
     width: 320px;
@@ -124,13 +128,9 @@ img {
     transform: translateY(3px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
+
+/* --- images meta data --- */
 .meta {
     text-align: center;
     margin: 10px 0 20px 0;
-}
-
-@media (max-width: 700px) {
-#outer {
-    margin: 0px auto;
-}
 }
