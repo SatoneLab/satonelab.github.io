@@ -36,6 +36,7 @@ header {
 
 .site-brand-container:hover {
   transform: translateY(-3px);   /* ほんの少し浮き上がる */
+  
 }
 
 .site-brand-logo {
@@ -87,8 +88,15 @@ header {
 /* 下のラベル */
 .nav-icon-label {
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
+}
+
+.label-full {
+  display: inline;      /* お問合せ 文言の表示 */
+}
+.label-short {
+  display: none;        /* 問合せ 文言の非表示 */
 }
 
 /* hover */
@@ -109,7 +117,7 @@ header {
   height: 70px;
 }
 #header-inner {
-  padding: 10px 2px 5px 15px;
+  padding: 10px 10px 5px 15px;
   border-radius: 0;
 }
 .site-brand-logo {
@@ -121,7 +129,7 @@ header {
 }
 
 .nav-icon-list {
-  gap: 3px;
+  gap: 10px;
 }
 .nav-icon-circle {
   width: 46px;
@@ -131,9 +139,17 @@ header {
 }
 
 .nav-icon-label {
-  margin-top: 6px;
-  font-size: 10px;
+  margin-top: 3px;
+  font-size: 14px;
 }
+
+.label-full {
+  display: none;      /* お問合せ 文言の非表示 */
+}
+.label-short {
+  display: inline;    /* 問合せ 文言の表示 */
+}
+
 }
 
 
@@ -143,7 +159,7 @@ header {
   height: 45px;
 }
 #header-inner {
-  padding: 10px 2px 5px 8px;
+  padding: 10px 5px 5px 8px;
   border-radius: 0;
 }
 .site-brand-logo {
@@ -155,7 +171,9 @@ header {
   font-size: 22px;
   
 }
-
+.nav-icon-list {
+  gap: 5px;
+}
 .nav-icon-circle {
   width: 40px;
   height: 40px;
@@ -164,7 +182,27 @@ header {
 }
 
 .nav-icon-label {
-  margin-top: 6px;
-  font-size: 8px;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.label-full {
+  display: none;      /* お問合せ 文言の非表示 */
+}
+.label-short {
+  display: inline;    /* 問合せ 文言の表示 */
+}
+}
+
+/* 極小 */
+@media (max-width: 350px) {
+.site-brand-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 2px;
+}
+.site-brand-name {
+  font-size: 18px;
+  
 }
 }

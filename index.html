@@ -27,41 +27,28 @@
 
     <div id="content">
       <div class="inner">
-        <p class="description">TRPG用のツールや個人製作物を公開している趣味のサイトだぞい。</p>
+        <p class="description">SatoneLabは、機械・電子工作などの自作物を中心に公開している個人製作サイトです。</p>
+        <p class="description">TRPG向けWEBアプリや素材も製作し、ソード・ワールド2.5のツールを主に掲載しています。</p>
         <div class="card-container">
-          <div class="card" data-href="/trpg/">
-            <h3><i class="fa-solid fa-dice"></i>TRPGツール</h3>
+          <a class="card" href="/trpg/">
+            <h3 class="card-title">
+              <i class="fa-solid fa-dice"></i>
+              TRPG
+            </h3>
             <p>TRPG用のツール集</p>
-          </div>
-          <div class="card" data-href="/content/">
-            <h3><i class="fa-solid fa-gears"></i>コンテンツ</h3>
+          </a>
+          <a class="card" href="/content/">
+            <h3 class="card-title">
+              <i class="fa-solid fa-gears"></i>
+              制作物
+            </h3>
             <p>個人製作物を公開</p>
-          </div>
+          </a>
         </div>
-
-        <div class="img-sns-icon-container">
-          <img src="/assets/images/satone/001_微笑_差し出す_正面_全体.png" class="satone-img">
-          <div id="sns-icon-list">
-            <a class="sns-icon-item" href="https://twitter.com/satone_030" target="_blank" rel="noopener noreferrer" class="btn twitter">
-              <div class="sns-icon-circle twitter-icon-circle">
-                <i class="fa-brands fa-x-twitter fa-xl"></i>
-              </div>
-              <div class="sns-icon-label">X(Twitter)</div>
-            </a>
-            <a class="sns-icon-item" href="https://www.youtube.com/channel/UCyJ1rzyCBxRZg5x68WcX-mA" target="_blank" rel="noopener noreferrer" class="btn youtube">
-              <div class="sns-icon-circle youtube-icon-circle">
-                <i class="fab fa-youtube fa-xl"></i>
-              </div>
-              <div class="sns-icon-label">YouTube</div>
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
 
-
-
+    
     <footer>
       <div id="footer"></div>
     </footer>
@@ -77,14 +64,5 @@
   </script>
   <script src="/common/breadcrumb.js"></script>
   
-  <script>
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if(e.target.tagName.toLowerCase() === 'a') return;
-        const url = card.getAttribute('data-href');
-        if(url) window.location.href = url;
-      });
-    });
-  </script>
 </body>
 </html>

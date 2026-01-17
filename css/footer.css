@@ -9,19 +9,85 @@ body {
     line-height: 1.6;
     
 }
+.footer-inner {
+    background-color: #f6f6f6;
+    border: 1px solid #eee;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 0px 0px 10px 10px;
+}
 
-/* ---footer--- */
-.site-footer {
-    border-radius: 0 0 10px 10px;
+/* ---SNS icon--- */
+#sns-icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    
+}
+
+.sns-icon-item {
+    padding: 10px 0px 10px 0px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;     /* 円とラベルを中央揃え */
+    text-decoration: none;  /* aタグの下線を消す */
+    color: inherit;         /* 色を継承 */
+}
+
+/* SNSロゴマーク */
+
+/* 丸いアイコン */
+.sns-icon-circle {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;    /* 縦中央 */
+    justify-content: center;/* 横中央 */
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    font-size: 20px;        /* アイコンサイズ */
+    color: #fff;
+    background-color: #ddd;
+}
+
+
+/* SNSラベル */
+.sns-icon-label {
     font-size: 14px;
-    height: 40px;
+    text-align: center;
+    color: #666;
+}
+
+/* hover */
+.sns-icon-item:hover .fa-x-twitter {
+    color: #00acee;        /* 旧Twitterブルー */
+    transition: all 0.2s;
+}
+.sns-icon-item:hover .fa-youtube {
+    color: #f03;
+    transition: all 0.2s;
+}
+.sns-icon-item:hover:hover .sns-icon-label{
+    color: #000;
+}
+
+.sns-icon-item:active .fa-x-twitter {
+    color: #00acee;        /* 旧Twitterブルー */
+}
+
+.sns-icon-item:active .fa-youtube {
+    color: #f03;
+}
+
+/* SatoneLabの権利表記 */
+.site-copyright {
+    font-size: 14px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: center; /* 横 */
     align-items: center;     /* 縦 */
-    color: #444;
-    background-color: #F8F8F8;
-    border-top: 1px solid #eee;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    color: #666;
 }
 
 
