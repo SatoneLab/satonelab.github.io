@@ -11,6 +11,23 @@ body {
 }
 
 
+h1 {
+    font-size: 28px;
+    font-family: 'monospace', serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+    border-bottom: 1px solid #999;
+}
+h3 {
+    font-size: 20px;
+    padding: 15px 0 5px 0;
+}
+
 ul {
     margin: 0 0 0 1em;
     padding: 0;

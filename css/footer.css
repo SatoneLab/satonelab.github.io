@@ -38,15 +38,15 @@ body {
 
 /* 丸いアイコン */
 .sns-icon-circle {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;    /* 縦中央 */
     justify-content: center;/* 横中央 */
     margin-right: 5px;
     border-radius: 50%;
     border: 1px solid #eee;
-    font-size: 20px;        /* アイコンサイズ */
+    font-size: 16px;        /* アイコンサイズ */
     color: #fff;
     background-color: #ddd;
 }
@@ -91,5 +91,14 @@ body {
 }
 
 
+@media (max-width: 900px) {
+.footer-inner {
+    border-radius: 0;
+}
+}
 
-
+@media (max-width: 480px) {
+.footer-inner {
+    border-radius: 0;
+}
+}
