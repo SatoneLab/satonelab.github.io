@@ -1,27 +1,7 @@
-function getBaseURL() {
-  // GAS Webアプリは script.google.com 配下
-  if (location.hostname.includes("script.google.com")) {
-    return "https://satonelab.github.io";
-  }
-  // GitHub Pagesなど通常サイト
-  return "";
-}
-
-function loadHTML(id, path) {
-  const url = getBaseURL() + path;
-
-  fetch(url)
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("https://satonelab.github.io/common/header.html")
     .then(res => res.text())
     .then(html => {
-      const el = document.getElementById(id);
-      if (el) el.innerHTML = html;
-    })
-    .catch(err => {
-      console.error("HTML load failed:", url, err);
+      document.getElementById("header").innerHTML = html;
     });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadHTML("header", "/common/header.html");
-  loadHTML("footer", "/common/footer.html");
 });
