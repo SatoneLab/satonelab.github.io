@@ -1,3 +1,5 @@
+alert("header.js loaded");
+
 document.addEventListener("DOMContentLoaded", () => {
   fetch("https://satonelab.github.io/common/header.html")
     .then(res => res.text())
