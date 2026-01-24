@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
+
+<!----- head ----->
 <head>
   <meta charset="UTF-8">
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="104528c9-8d74-4f0e-8df5-e0306a4ee701"></script>
+
   <title>TRPGツール | Satone Lab</title>
   <meta name="description" content="さとねが作ったTRPG用のツールを公開しているぞい。">
   <meta name="keywords" content="Vtuber TRPG">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon -->
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
+
+  <!-- 共通 JS/CSS をまとめている (Header/Footer/Breadcrumb/Analytics などを自動読み込み)-->
+  <script src="/common/bootstrap.js"></script>
+
+  <!-- ページ固有 CSS -->
   <link rel="stylesheet" href="./style.css">
 
   
 </head>
+
+<!----- body ----->
 <body>
   <div id="outer">
+    <!-- header -->
     <header>
       <div id="header"></div>
     </header>
 
+    <!-- breadcrumb -->
     <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
 
+    <!-- 本文 -->
     <div id="content">
       <div class="inner">
         <h2>TRPGツール</h2>
@@ -43,13 +57,13 @@
       </div>
     </div>
 
-    
+    <!-- footer -->
     <footer>
       <div id="footer"></div>
     </footer>
   </div>
 
-  <script src="/common/bootstrap.js"></script>
+  <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
     {"name":"HOME","url":"/"},

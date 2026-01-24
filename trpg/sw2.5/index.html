@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
+
+<!----- head ----->
 <head>
   <meta charset="UTF-8">
+
   <title>SW2.5 | TRPGツール | Satone Lab</title>
   <meta name="description" content="さとねが作ったSW2.5のツールを公開しているぞい。">
   <meta name="keywords" content="Vtuber TRPG">
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/base.css">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
+
+  <!-- 共通 JS/CSS をまとめている (Header/Footer/Breadcrumb/Analytics などを自動読み込み)-->
+  <script src="/common/bootstrap.js"></script>
+
+  <!-- ページ固有 CSS -->
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="/css/breadcrumb.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  >
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
+
+<!----- body ----->
 <body>
   <div id="outer">
+    <!-- header -->
     <header>
       <div id="header"></div>
     </header>
 
+    <!-- breadcrumb -->
     <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
 
+    <!-- 本文 -->
     <div id="content">
       <h2>ソード・ワールド2.5</h2>
       <p class="description">さとねが作ったソード・ワールド2.5向けのツールだぞい。</p>
@@ -102,6 +109,7 @@
       </div>
     </div>
 
+    <!-- SW2.5 rights-notice -->
     <div class="rights-notice">
       <p>
         本ページに掲載されているソード・ワールド2.5関連ツールは、
@@ -110,16 +118,14 @@
       </p>
       <p>(C)Group SNE 「ソード・ワールド2.0／2.5」</p>
     </div>
-    
+
+    <!-- footer -->
     <footer>
       <div id="footer"></div>
     </footer>
   </div>
 
-
-  <script src="/common/header.js"></script>
-  <script src="/common/footer.js"></script>
-  
+  <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
     {"name":"HOME","url":"/"},
@@ -127,7 +133,6 @@
     {"name":"ソード・ワールド2.5","url":"/trpg/sw2.5/"}
   ]
   </script>
-  <script src="/common/breadcrumb.js"></script>
 
 </body>
 </html>

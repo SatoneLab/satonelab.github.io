@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
+
+<!----- head ----->
 <head>
   <meta charset="UTF-8">
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="104528c9-8d74-4f0e-8df5-e0306a4ee701"></script>
+
   <title>Satone Lab</title>
   <meta name="description" content="SatoneLabは、TRPG用のツールや個人製作物を公開している趣味のサイトだぞい。">
   <meta name="keywords" content="Vtuber">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
+
+  <!-- 共通 JS/CSS をまとめている (Header/Footer/Breadcrumb/Analytics などを自動読み込み)-->
+  <script src="/common/bootstrap.js"></script>
+
+  <!-- ページ固有 CSS -->
   <link rel="stylesheet" href="./style.css">
 
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="/css/breadcrumb.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  >
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  
-  <script src="/common/bootstrap.js"></script>
 </head>
+
+<!----- body ----->
 <body>
   <div id="outer">
+    <!-- header -->
     <header>
       <div id="header"></div>
     </header>
 
+    <!-- 本文 -->
     <div id="content">
       <div class="inner">
         <p class="description">SatoneLabは、機械・電子工作などの自作物を中心に公開している個人製作サイトです。</p>
@@ -51,13 +53,14 @@
       </div>
     </div>
 
-    
+    <!-- footer -->
     <footer>
       <div id="footer"></div>
     </footer>
     
   </div>
 
+  <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
   ]

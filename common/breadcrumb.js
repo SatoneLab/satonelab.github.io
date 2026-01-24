@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+// breadcrumb.js
+window.addEventListener("load", () => {
   const nav = document.querySelector(".breadcrumb");
   const dataTag = document.getElementById("breadcrumb-data");
-
   if (!nav || !dataTag) return;
 
   const items = JSON.parse(dataTag.textContent);
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach((item, index) => {
     const li = document.createElement("li");
-
     if (index < items.length - 1 && item.url) {
       const a = document.createElement("a");
       a.href = item.url;
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       li.textContent = item.name;
       li.setAttribute("aria-current", "page");
     }
-
     ol.appendChild(li);
   });
 
