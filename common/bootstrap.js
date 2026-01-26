@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   // 共通JS
   // -----------------------
-  js(`${BASE}/common/header.js?v=${VERSION}`);
+  js(`https://satonelab.com/common/header.js?v=${VERSION}`);
   js(`${BASE}/common/footer.js?v=${VERSION}`);
   js(`${BASE}/common/breadcrumb.js?v=${VERSION}`);
 
