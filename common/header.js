@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   const target = document.getElementById("header");
   if (!target) return;
 
-  fetch(`${BASE}/common/header.html?v=` + Date.now())
+  fetch(`${BASE}/common/header.html?v=2` + Date.now())
     .then(res => res.text())
     .then(html => target.innerHTML = html)
     .catch(err => console.error("Header fetch error:", err));
