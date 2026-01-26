@@ -1,5 +1,5 @@
 // header.js
-const BASE = isGAS() ? "https://satonelab.com" : ""; // 環境に応じて変更
+const BASE = isGAS() ? "https://satonelab.com" : "";  // 環境に応じて自動変更される
 
 // 開いているページがGASかどうか判定する
 function isGAS() {
