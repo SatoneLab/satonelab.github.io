@@ -23,8 +23,8 @@ function js(src, attrs = {}) {
 function isGAS() {
   const host = window.location.hostname;
   // GAS の Web アプリは googleusercontent.com または script.google.com などのホストになる
-  console.log(host.includes("script.google.com"));
-  return host.includes("script.google.com");
+  console.log(host.includes("googleusercontent.com") || host.includes("google.com"));
+  return host.includes("googleusercontent.com") || host.includes("google.com");
 }
 
 // DOM 完全準備後に共通リソースを読み込む
