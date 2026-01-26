@@ -1,5 +1,5 @@
 const BASE = isGAS() ? "https://satonelab.com" : ""; // 環境に応じて自動変更される
-const VERSION = "2026-01-24-5";
+const VERSION = "2026-01-24-6";
 
 // CSS 読み込み関数
 function css(href, attrs = {}) {
@@ -23,7 +23,8 @@ function js(src, attrs = {}) {
 function isGAS() {
   const host = window.location.hostname;
   // GAS の Web アプリは googleusercontent.com または script.google.com などのホストになる
-  return host.includes("satonelab.com") || host.includes("script.google.com");
+  console.log(host.includes("script.google.com"));
+  return host.includes("script.google.com");
 }
 
 // DOM 完全準備後に共通リソースを読み込む
