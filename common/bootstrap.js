@@ -19,6 +19,7 @@ function js(src, attrs = {}) {
   document.head.appendChild(s);
 }
 
+// 開いているページがGASかどうか判定する
 function isGAS() {
   const host = window.location.hostname;
   // GAS の Web アプリは googleusercontent.com または script.google.com などのホストになる
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   // 共通JS
   // -----------------------
-  js(`https://satonelab.com/common/header.js?v=${VERSION}`);
+  js(`${BASE}/common/header.js?v=${VERSION}`);
   js(`${BASE}/common/footer.js?v=${VERSION}`);
   js(`${BASE}/common/breadcrumb.js?v=${VERSION}`);
 
