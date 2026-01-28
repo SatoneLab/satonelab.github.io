@@ -1,10 +1,11 @@
-// footer.js
 window.addEventListener("load", () => {
-  const target = document.getElementById("footer");
-  if (!target) return;
+  const targets = document.querySelectorAll(".site-footer");
+  if (!targets.length) return;
 
-  fetch(`${BASE}/common/footer.html?v=` + Date.now())
-    .then(res => res.text())
-    .then(html => target.innerHTML = html)
-    .catch(err => console.error("Footer fetch error:", err));
+  targets.forEach(target => {
+    fetch(`${BASE}/common/footer.html?v=` + Date.now())
+      .then(res => res.text())
+      .then(html => target.innerHTML = html)
+      .catch(err => console.error("Footer fetch error:", err));
+  });
 });
