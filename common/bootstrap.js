@@ -1,5 +1,5 @@
 const BASE = isGAS() ? "https://satonelab.com" : ""; // 環境に応じて自動変更される
-const VERSION = "2026-01-24-7";
+const VERSION = Date.now();
 
 // CSS 読み込み関数
 function css(href, attrs = {}) {

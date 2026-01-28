@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   if (!targets.length) return;
 
   targets.forEach(target => {
-    fetch(`${BASE}/common/header.html?v=` + Date.now())
+    fetch(`${BASE}/common/header.html?v=${VERSION}`)
       .then(res => res.text())
       .then(html => target.innerHTML = html)
       .catch(err => console.error("Header fetch error:", err));
