@@ -13,53 +13,86 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/logo/favicon-64.png">
 
   <!-- 共通 JS/CSS をまとめている (Header/Footer/Breadcrumb/Analytics などを自動読み込み)-->
-  <script src="/common/bootstrap.js"></script>
+  <script src="/common/bootstrap.js" defer></script>
+
+  <!-- ページ種別ごとの CSS -->
+  <link rel="stylesheet" href="css/page.css">
 
   <!-- ページ固有 CSS -->
   <link rel="stylesheet" href="./style.css">
 
-</head>
-
-<!----- body ----->
-<body>
-  <div id="outer">
-    <!-- header -->
-    <header class="site-header"></header>
-
-    <!-- 本文 -->
-    <div id="content">
-      <div class="inner">
-        <p class="description">SatoneLabは、機械・電子工作などの自作物を中心に公開している個人製作サイトです。</p>
-        <p class="description">TRPG向けWEBアプリや素材も製作し、ソード・ワールド2.5のツールを主に掲載しています。</p>
-        <div class="card-container">
-          <a class="card" href="/trpg/">
-            <h3 class="card-title">
-              <i class="fa-solid fa-dice"></i>
-              TRPG
-            </h3>
-            <p>TRPG用のツール集</p>
-          </a>
-          <a class="card" href="/content/">
-            <h3 class="card-title">
-              <i class="fa-solid fa-gears"></i>
-              製作物
-            </h3>
-            <p>個人製作物を公開</p>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <footer class="site-footer"></footer>
-    
-  </div>
-
   <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
+    {"name":"HOME","url":"/"},
+    {"name":"コンテンツ","url":"/content/"}
   ]
   </script>
 
+</head>
+
+<!----- body ----->
+<body class="site-frame">
+  <div class="site-layout">
+		<div class="site-core">
+      <!-- サイトの header -->
+      <header class="site-header"></header>
+
+      <!-- 本文 -->
+      <main class="site-main">
+
+        <!-- breadcrumb (Homeは表示しない) -->
+         <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+        <section class="content">
+
+          <!-- Content の header -->
+          <div class="content__header">
+            <h1 id="content__tittle" class="content__title">Home</h1>
+            <p class="content__description">SatoneLabは、機械・電子工作などの自作物を中心に公開している個人製作サイトです。</p>
+            <p class="content__description">TRPG向けWEBアプリや素材も製作し、ソード・ワールド2.5のツールを主に掲載しています。</p>
+          </div>
+
+          <!-- Content の メイン部分 -->
+          <div class="content__body">
+
+            <!-- card -->
+            <div class="content__card">
+              <section class="card">
+                <a class="card__link" href="/trpg/">
+                  <div class="card__header">
+                    <i class="card__icon fa-solid fa-dice"></i>
+                    <h2 class="card__title">TRPG</h2>
+                    <p class="card__tag">test</p>
+                  </div>
+                  <p class="card__summary">TRPG用のツール集</p>
+                </a>
+              </section>
+              <section class="card">
+                <a class="card__link" href="/content/">
+                  <div class="card__header">
+                    <i class="card__icon fa-solid fa-gears"></i>
+                    <h2 class="card__title">製作物</h2>
+                  </div>
+                  <p class="card__summary">個人製作物を公開</p>
+                </a>
+              </section>
+            </div>
+          </div>
+
+          <!-- Content の footer -->
+          <div class="content__footer">
+
+          </div>
+        </div>
+      </main>
+
+      <!-- サイトのfooter -->
+      <footer class="site-footer"></footer>
+    </div>
+
+    <!-- 広告 -->
+    <aside class="site-ads site-ads--sidebar"></aside>
+  </div>
 </body>
 </html>

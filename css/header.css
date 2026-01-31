@@ -6,15 +6,13 @@
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
 header {
   margin-top: 15px;
-  height: 110px;
 }
 
-#header-inner {
+.header-inner {
   display: flex;
   justify-content: space-between; /* 左右に配置 */
   align-items: center;            /* 縦中央揃え */
@@ -48,7 +46,7 @@ header {
   white-space: nowrap;
   color: #333;
   font-size: 40px;
-
+  
 }
 
 /* ---Navigation Bar--- */
@@ -110,13 +108,12 @@ header {
   transform: translateY(-3px);   /* ほんの少し浮き上がる */
 }
 
-
-@media (max-width: 900px) {
+/* タブレットサイズ */
+@media (max-width: var(--breakpoint-medium)) {
 header {
   margin-top: 0;
-  height: 70px;
 }
-#header-inner {
+.header-inner {
   padding: 10px 10px 5px 15px;
   border-radius: 0;
 }
@@ -153,11 +150,8 @@ header {
 }
 
 
-/* --- small ---*/
-@media (max-width: 480px) {
-header {
-  height: 45px;
-}
+/* --- スマホサイズ ---*/
+@media (max-width: var(--breakpoint-compact)) {
 #header-inner {
   padding: 10px 5px 5px 8px;
   border-radius: 0;
@@ -194,8 +188,8 @@ header {
 }
 }
 
-/* 極小 */
-@media (max-width: 350px) {
+/* 極小スマホサイズ */
+@media (max-width: var(--breakpoint-tiny)) {
 .site-brand-logo {
   width: 25px;
   height: 25px;
