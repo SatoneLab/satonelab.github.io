@@ -24,8 +24,6 @@
   <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
-    {"name":"HOME","url":"/"},
-    {"name":"コンテンツ","url":"/content/"}
   ]
   </script>
 
@@ -48,7 +46,6 @@
 
           <!-- Content の header -->
           <div class="content__header">
-            <h1 id="content__tittle" class="content__title">Home</h1>
             <p class="content__description">SatoneLabは、機械・電子工作などの自作物を中心に公開している個人製作サイトです。</p>
             <p class="content__description">TRPG向けWEBアプリや素材も製作し、ソード・ワールド2.5のツールを主に掲載しています。</p>
           </div>
@@ -58,17 +55,16 @@
 
             <!-- card -->
             <div class="content__card">
-              <section class="card">
+              <section class="card card--link-small">
                 <a class="card__link" href="/trpg/">
                   <div class="card__header">
                     <i class="card__icon fa-solid fa-dice"></i>
                     <h2 class="card__title">TRPG</h2>
-                    <p class="card__tag">test</p>
                   </div>
                   <p class="card__summary">TRPG用のツール集</p>
                 </a>
               </section>
-              <section class="card">
+              <section class="card--link-small">
                 <a class="card__link" href="/content/">
                   <div class="card__header">
                     <i class="card__icon fa-solid fa-gears"></i>

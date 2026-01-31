@@ -35,9 +35,19 @@
     margin-bottom: 15px;
 }
 
-.card {
+.card--link-small {
+    flex: 0 1 250px;
+}
+.card--link-medium {
     flex: 0 1 300px;
 }
+.card--tool {
+
+}
+.card--image {
+    
+}
+
 .card__link {
     display: block;
     width: 100%;            /* Cardの幅いっぱいに広げる */
@@ -61,25 +71,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;  /* アイコン・タイトル・タグの間隔 */
+  gap: 5px;                 /* アイコン・タイトル・タグの間隔 */
   margin: 10px;
 }
 
 .card__icon {
-    font-size: 0.5em;
+    font-size: 1em;
+    margin-top: 2px;        /* 高さ微調整 */
     color: #555;
+
 }
 
 .card__title {
     font-size: 22px;
     color: #333;
-    margin: 0;
 }
 
 .card__tag {
     font-size: 11px;
     padding: 2px 6px;
-    margin: 0;
+    margin-top: 2px;        /* 高さ微調整 */
     color: #888;
     border-radius: 999px;
     background: #f0f0f0;
@@ -91,8 +102,6 @@
     margin-bottom: 15px;
     color: #555;
 }
-
-
 
 
 
