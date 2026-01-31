@@ -2,7 +2,8 @@
 .breadcrumb ol {
     display: flex;
     list-style: none;
-    padding: 30px 5px 20px 40px;
+    padding: 15px 5px 0px 40px;
+    padding-left: 40px;
     margin: 0;
 }
 
@@ -16,19 +17,22 @@
     color: #999;
 }
 
+/* タブレットサイズ */
 @media (max-width: 900px) {
 .breadcrumb ol {
-    padding: 30px 5px 20px 30px;
+   padding-left: 30px;
 }
 .breadcrumb li {
     font-size: 14px;
 }
 }
 
+/* スマホサイズ */
 @media (max-width: 480px) {
 .breadcrumb ol {
-    padding: 40px 5px 20px 15px;
+    padding-left: 15px;
 }
+
 .breadcrumb li {
     font-size: 11px;
 }

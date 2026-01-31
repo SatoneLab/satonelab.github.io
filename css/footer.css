@@ -6,10 +6,8 @@
 body {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    
 }
-.footer-inner {
+.site-footer__wrapper {
     background-color: #f6f6f6;
     border: 1px solid #eee;
     border-top: 1px solid #ddd;
@@ -18,14 +16,14 @@ body {
 }
 
 /* ---SNS icon--- */
-#sns-icon-container {
+.site-footer__sns {
     display: flex;
     justify-content: center;
     gap: 25px;
     
 }
 
-.sns-icon-item {
+.site-footer__sns-item {
     padding: 10px 0px 10px 0px ;
     display: flex;
     flex-direction: row;
@@ -36,8 +34,8 @@ body {
 
 /* SNSロゴマーク */
 
-/* 丸いアイコン */
-.sns-icon-circle {
+/* アイコンの周りの丸 */
+.site-footer__sns-circle {
     height: 40px;
     width: 40px;
     display: flex;
@@ -46,42 +44,46 @@ body {
     margin-right: 5px;
     border-radius: 50%;
     border: 1px solid #eee;
-    font-size: 16px;        /* アイコンサイズ */
-    color: #fff;
     background-color: #ddd;
 }
 
+/* アイコン */
+.site-footer__sns-icon {
+    color: #fff;
+    font-size: 22px;        /* アイコンサイズ */
+}
 
 /* SNSラベル */
-.sns-icon-label {
+.site-footer__sns-label {
     font-size: 14px;
     text-align: center;
     color: #666;
 }
 
-/* hover */
-.sns-icon-item:hover .fa-x-twitter {
+/* hover (アイコンとラベルに色をつける) */
+.site-footer__sns-item:hover .site-footer__sns-icon--twitter {
     color: #00acee;        /* 旧Twitterブルー */
     transition: all 0.2s;
 }
-.sns-icon-item:hover .fa-youtube {
+.site-footer__sns-item:hover .site-footer__sns-icon--youtube {
     color: #f03;
     transition: all 0.2s;
 }
-.sns-icon-item:hover:hover .sns-icon-label{
+.site-footer__sns-item:hover:hover .site-footer__sns-label{
     color: #000;
 }
 
-.sns-icon-item:active .fa-x-twitter {
+/* active (アイコンに色をつける) */
+.site-footer__sns-item:active .site-footer__sns-icon--twitter {
     color: #00acee;        /* 旧Twitterブルー */
 }
 
-.sns-icon-item:active .fa-youtube {
+.site-footer__sns-item:active .site-footer__sns-icon--youtube {
     color: #f03;
 }
 
 /* SatoneLabの権利表記 */
-.site-copyright {
+.site-footer__copyright {
     font-size: 14px;
     padding-bottom: 15px;
     display: flex;
@@ -92,13 +94,13 @@ body {
 
 
 @media (max-width: 900px) {
-.footer-inner {
+.site-footer__wrapper {
     border-radius: 0;
 }
 }
 
 @media (max-width: 480px) {
-.footer-inner {
+.site-footer__wrapper {
     border-radius: 0;
 }
 }

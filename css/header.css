@@ -3,16 +3,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  margin-top: 15px;
-}
-
-.header-inner {
+.site-header__wrapper {
   display: flex;
   justify-content: space-between; /* 左右に配置 */
   align-items: center;            /* 縦中央揃え */
@@ -24,7 +15,7 @@ header {
 }
 
 /* --- Site brand ---*/
-.site-brand-container {
+.site-header__brand {
   display: flex;
   align-items: center;
   text-decoration: none; /* 下線を消す */
@@ -32,17 +23,17 @@ header {
   transition: all 0.1s;
 }
 
-.site-brand-container:hover {
+.site-header__brand:hover {
   transform: translateY(-3px);   /* ほんの少し浮き上がる */
   
 }
 
-.site-brand-logo {
+.site-header__logo {
   width: 70px;
   height: 70px;
   margin-right: 10px;
 }
-.site-brand-name {
+.site-header__title {
   white-space: nowrap;
   color: #333;
   font-size: 40px;
@@ -50,13 +41,13 @@ header {
 }
 
 /* ---Navigation Bar--- */
-.nav-icon-list {
+.site-header__nav {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.nav-icon-item {
+.site-header__nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;     /* 円とラベルを中央揃え */
@@ -64,8 +55,8 @@ header {
   color: inherit;         /* 色を継承 */
 }
 
-/* 丸いアイコン */
-.nav-icon-circle {
+/* アイコンの周りの丸 */
+.site-header__nav-circle {
   width: 56px;
   height: 56px;
   border-radius: 50%;     /* 円にする */
@@ -79,26 +70,32 @@ header {
   align-items: center;    /* 縦中央 */
   justify-content: center;/* 横中央 */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-size: 22px;        /* アイコンサイズ */
   transition: all 0.2s;
 }
 
+/* アイコン */
+.site-header__nav-icon {
+  font-size: 28px;        /* アイコンサイズ */
+  color: #000;
+}
+
 /* 下のラベル */
-.nav-icon-label {
+.site-header__nav-label {
   margin-top: 6px;
   font-size: 14px;
   text-align: center;
 }
 
-.label-full {
+/* お問合せラベルの表示/非表示 */
+.site-header__nav-label--full {
   display: inline;      /* お問合せ 文言の表示 */
 }
-.label-short {
+.site-header__nav-label--short {
   display: none;        /* 問合せ 文言の非表示 */
 }
 
 /* hover */
-.nav-icon-item:hover .nav-icon-circle {
+.site-header__nav-item:hover .site-header__nav-circle {
   background: linear-gradient(
     to bottom,
     #fff,
@@ -108,42 +105,42 @@ header {
   transform: translateY(-3px);   /* ほんの少し浮き上がる */
 }
 
+
 /* タブレットサイズ */
-@media (max-width: var(--breakpoint-medium)) {
-header {
-  margin-top: 0;
-}
-.header-inner {
+@media (max-width: 900px) {
+.site-header__wrapper {
   padding: 10px 10px 5px 15px;
   border-radius: 0;
 }
-.site-brand-logo {
+.site-header__logo {
   width: 55px;
   height: 55px;
 }
-.site-brand-name {
+.site-header__title {
   font-size: 30px;
 }
 
-.nav-icon-list {
+.site-header__nav {
   gap: 10px;
 }
-.nav-icon-circle {
+.site-header__nav-circle {
   width: 46px;
   height: 46px;
+}
 
+.site-header__nav-icon {
   font-size: 22px;        /* アイコンサイズ */
 }
 
-.nav-icon-label {
+.site-header__nav-label {
   margin-top: 3px;
   font-size: 14px;
 }
 
-.label-full {
+.site-header__nav-label--full {
   display: none;      /* お問合せ 文言の非表示 */
 }
-.label-short {
+.site-header__nav-label--short {
   display: inline;    /* 問合せ 文言の表示 */
 }
 
@@ -151,51 +148,54 @@ header {
 
 
 /* --- スマホサイズ ---*/
-@media (max-width: var(--breakpoint-compact)) {
-#header-inner {
+@media (max-width: 480px) {
+.site-header__wrapper {
   padding: 10px 5px 5px 8px;
   border-radius: 0;
 }
-.site-brand-logo {
+.site-header__logo {
   width: 30px;
   height: 30px;
   margin-right: 5px;
 }
-.site-brand-name {
+.site-header__title {
   font-size: 22px;
   
 }
-.nav-icon-list {
+.site-header__nav {
   gap: 5px;
 }
-.nav-icon-circle {
+.site-header__nav-circle {
   width: 40px;
   height: 40px;
 
+}
+
+.site-header__nav-icon {
   font-size: 18px;        /* アイコンサイズ */
 }
 
-.nav-icon-label {
+.site-header__nav-label {
   margin-top: 2px;
   font-size: 12px;
 }
 
-.label-full {
+.site-header__nav-label--full {
   display: none;      /* お問合せ 文言の非表示 */
 }
-.label-short {
+.site-header__nav-label--short {
   display: inline;    /* 問合せ 文言の表示 */
 }
 }
 
 /* 極小スマホサイズ */
-@media (max-width: var(--breakpoint-tiny)) {
-.site-brand-logo {
+@media (max-width: 350px) {
+.site-header__logo {
   width: 25px;
   height: 25px;
   margin-right: 2px;
 }
-.site-brand-name {
+.site-header__title {
   font-size: 18px;
   
 }

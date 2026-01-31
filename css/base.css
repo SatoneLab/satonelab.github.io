@@ -2,11 +2,6 @@
 * {
     box-sizing: border-box;
 }
-:root {
-    --breakpoint-medium: 900px;
-    --breakpoint-compact: 480px;
-    --breakpoint-tiny: 350px;
-}
 
 body {
     background-color: #f0f8ff;

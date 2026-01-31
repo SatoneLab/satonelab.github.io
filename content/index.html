@@ -16,51 +16,12 @@
   <!-- 共通 JS/CSS をまとめている (Header/Footer/Breadcrumb/Analytics などを自動読み込み)-->
   <script src="/common/bootstrap.js"></script>
 
+  <!-- ページ種別ごとの CSS -->
+  <link rel="stylesheet" href="/css/page.css">
+  
   <!-- ページ固有 CSS -->
   <link rel="stylesheet" href="./style.css">
 
-</head>
-
-<!----- body ----->
-<body>
-  <div id="outer">
-    <!-- header -->
-    <header class="site-header"></header>
-
-    <!-- breadcrumb -->
-    <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
-    
-    <!-- 本文 -->
-    <div id="content">
-      <div class="inner">
-        <h2>製作物</h2>
-        <p class="description">さとねが作っているものの一覧だぞい。</p>
-        <div class="card-container">
-          <a class="card" href="">
-            <h3 class="card-title">
-              <i class="fa-solid fa-magnet"></i>
-              磁気バレル研磨機
-              <span class="tag">完成</span>
-            </h3>
-            <p>磁気式のバレル研磨機</p>
-          </a>
-          <a class="card" href="">
-            <h3 class="card-title">
-              <i class="fa-solid fa-microphone"></i>
-              バイノーラルマイク
-              <span class="tag">完成</span>
-            </h3>
-            <p>自作バイノーラルマイク</p>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <footer class="site-footer"></footer>
-
-  </div>
-  
   <!-- breadcrumb 設定 -->
   <script type="application/json" id="breadcrumb-data">
   [
@@ -69,5 +30,70 @@
   ]
   </script>
 
+</head>
+
+<!----- body ----->
+<body class="site-frame">
+  <div class="site-layout">
+		<div class="site-core">
+      <!-- サイトの header -->
+      <header class="site-header"></header>
+
+      <!-- 本文 -->
+      <main class="site-main">
+
+        <!-- breadcrumb (Homeは表示しない) -->
+         <nav class="breadcrumb"></nav>
+
+        <section class="content">
+
+          <!-- Content の header -->
+          <div class="content__header">
+            <h1 id="content__tittle" class="content__title">製作物</h1>
+            <p class="content__description">さとねが作っているものの一覧だぞい。</p>
+          </div>
+
+          <!-- Content の メイン部分 -->
+          <div class="content__body">
+
+            <!-- card -->
+            <div class="content__card">
+              <section class="card">
+                <a class="card__link" href="">
+                  <div class="card__header">
+                    <i class="card__icon fa-solid fa-magnet"></i>
+                    <h2 class="card__title">磁気バレル研磨機</h2>
+                    <p class="card__tag">完成</p>
+                  </div>
+                  <p class="card__summary">磁気式のバレル研磨機</p>
+                </a>
+              </section>
+              <section class="card">
+                <a class="card__link" href="">
+                  <div class="card__header">
+                    <i class="card__icon fa-solid fa-gears"></i>
+                    <h2 class="card__title">バイノーラルマイク</h2>
+                    <p class="card__tag">完成</p>
+                  </div>
+                  <p class="card__summary">自作バイノーラルマイク</p>
+                </a>
+              </section>
+            </div>
+          </div>
+
+          <!-- Content の footer -->
+          <div class="content__footer">
+
+          </div>
+        </section>
+      </main>
+
+      <!-- サイトのfooter -->
+      <footer class="site-footer"></footer>
+    </div>
+
+    <!-- 広告 -->
+    <aside class="site-ads site-ads--sidebar"></aside>
+  </div>
 </body>
 </html>
