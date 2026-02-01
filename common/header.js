@@ -18,11 +18,18 @@ window.addEventListener("load", () => {
       .then(html => {
         target.innerHTML = html;
 
-        // --- GAS環境なら、相対パスを絶対パスに変換 ---
+        // GAS環境ならリンクと画像を絶対パスに変換
         if (isGAS()) {
           const links = target.querySelectorAll("a[href^='/']");
           links.forEach(a => {
-            a.href = `${BASE}${a.getAttribute("href")}`;
+            const absHref = `${BASE}${a.getAttribute("href")}`;
+            a.href = absHref;
+
+            // クリック時に強制遷移させる
+            a.addEventListener("click", (e) => {
+              e.preventDefault();          // 元のリンク動作を止める
+              window.location.href = absHref;  // ブラウザで遷移
+            });
           });
 
           const imgs = target.querySelectorAll("img[src^='/']");
