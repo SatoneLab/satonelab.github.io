@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
             // クリック時に強制遷移させる
             a.addEventListener("click", (e) => {
               e.preventDefault();          // 元のリンク動作を止める
-              window.location.href = absHref;  // ブラウザで遷移
+              window.top.location.href = absHref;  // ブラウザで遷移
             });
           });
 
